@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <title>Eventos</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="../resources/favicon.ico" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="../styles/estilosEventos.css" />
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand navbar-dark bg-primary">
+      <a class="navbar-brand" href="../index.html">Events&#160;manager</a>
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link active" href="eventos.html">Eventos</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="eventosPasados.html"
+            >Eventos&#160;Pasados</a
+          >
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="nuevo-evento.html"
+            >Nuevo&#160;evento</a
+          >
+        </li>
+        <li class="nav-item">
+          <a class="nav-link">Ordenar&#160;por:</a>
+        </li>
+        <li>
+          <select name="orden" id="orden">
+            <option value="nombreASC">Alfabético(Nombre)</option>
+            <option value="descripcionASC">Alfabético(descripción)</option>
+            <option value="fechaASC">fecha</option>
+            <option value="precioASC">Precio Ascendente</option>
+            <option value="precioDESC">Precio Descendente</option>
+          </select>
+        </li>
+      </ul>
+      <p id="logout"><a>Cerrar&#160;Session</a></p>
+    </nav>
+    <h1 id="nombreUser"></h1>
+    <section id="contenedor-eventos"></section>
+
+    <div class="card-group"></div>
+    <script src="../scripts/ajax.js"></script>
+    <script src="../scripts/eventos-pasados.js"></script>
+  </body>
+</html>

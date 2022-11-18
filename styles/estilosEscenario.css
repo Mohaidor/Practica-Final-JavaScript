@@ -1,0 +1,104 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  width: 100%;
+  background-color: lightgray;
+}
+
+#orden {
+  height: 2em;
+  margin-top: 0.5em;
+  float: left;
+}
+
+nav #logout a {
+  cursor: pointer;
+  color: #fff;
+  justify-self: flex-end;
+}
+nav #logout a:hover {
+  color: blue;
+}
+
+header {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  background-color: #ffffff;
+}
+
+header h1 {
+  width: 100%;
+  margin: 0.2em;
+  text-align: center;
+}
+
+header #descripcion {
+  margin-left: 2em;
+}
+
+header #fecha {
+  margin-left: 2em;
+}
+
+header #precio {
+  margin-left: 2em;
+}
+
+header #precio:after {
+  content: " €";
+}
+
+.contenido {
+  background-color: #ffffff;
+  width: 80%;
+  min-width: 700px;
+  margin: auto;
+}
+
+.contenido section {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  width: 100%;
+}
+
+.contenido section header {
+  margin-bottom: 1em;
+}
+
+.contenido section header img {
+  max-width: 100%;
+  height: auto;
+}
+
+.contenido section #container {
+  display: grid;
+  grid-template-columns: repeat(15, 1fr);
+  -moz-column-gap: 0.5em;
+  column-gap: 0.5em;
+  row-gap: 0.2em;
+  margin-bottom: 2em;
+}
+
+.contenido section #container .asiento {
+  width: 2em;
+  height: 2em;
+  background-color: green;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.contenido section #container .asiento img {
+  width: 100%;
+}
+
+.contenido section #container .asientoOcupado {
+  background-color: red;
+  cursor: auto;
+}/*# sourceMappingURL=estilosEscenario.css.map */

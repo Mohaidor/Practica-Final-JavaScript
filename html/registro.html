@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <title>Eventos</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="resources/favicon.ico" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="../styles/estilosLogin.css" />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-sm navbar-dark bg-primary">
+      <a class="navbar-brand" href="../index.html">Events manager</a>
+      <ul class="navbar-nav mr-auto" hidden>
+        <li class="nav-item">
+          <a class="nav-link active" href="html/eventos.html">Eventos</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="html/eventosPasados.html"
+            >Eventos Pasados</a
+          >
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="html/nuevo-evento.html"
+            >Nuevo evento</a
+          >
+        </li>
+      </ul>
+    </nav>
+
+    <div class="container">
+      <h1>REGISTRO</h1>
+      <form action="#" class="mt-4" id="newEvent">
+        <div class="form-group" id="grupo-usuario">
+          <label for="usuario">Usuario</label>
+          <input type="text" class="form-control" id="usuario" name="usuario" />
+          <p class="error"></p>
+        </div>
+        <div class="form-group" id="grupo-pass">
+          <label for="pass">Contraseña</label>
+          <div id="contenedor-password">
+            <input type="password" class="form-control" id="pass" name="pass" />
+            <img
+              src="../resources/vision.png"
+              alt="ver contraseña"
+              class="show-password"
+            />
+          </div>
+          <p class="error"></p>
+        </div>
+        <div class="form-group" id="grupo-pass2">
+          <label for="pass2">Verificación de Contraseña</label>
+          <div id="contenedor-password">
+            <input
+              type="password"
+              class="form-control"
+              id="pass2"
+              name="pass2"
+            />
+            <img
+              src="../resources/vision.png"
+              alt="ver contraseña"
+              class="show-password2"
+            />
+          </div>
+          <p class="error"></p>
+        </div>
+        <div class="btn-container">
+          <input
+            type="submit"
+            class="btn btn-primary btn-lg"
+            id="registro"
+            value="Registrarse"
+          />
+        </div>
+        <p>¿Ya tienes cuenta?<a href="../index.html">Logueate</a></p>
+      </form>
+    </div>
+    <address>
+      <h5 id="contact">
+        <a href="mailto:mh.haidor@gmail.com">&#169;Muhammad Hicho Haidor</a>
+      </h5>
+    </address>
+    <script src="../scripts/ajax.js"></script>
+    <script src="../scripts/registro.js"></script>
+    <script src="../scripts/validaRegistro.js"></script>
+  </body>
+</html>

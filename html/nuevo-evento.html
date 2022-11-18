@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <title>Nuevo Evento</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="../resources/favicon.ico" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="../styles/estilosForm.css" />
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand navbar-dark bg-primary">
+      <a class="navbar-brand" href="../index.html">Events&#160;manager</a>
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link active" href="eventos.html">Eventos</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="eventosPasados.html"
+            >Eventos&#160;Pasados</a
+          >
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="nuevo-evento.html"
+            >Nuevo&#160;evento</a
+          >
+        </li>
+      </ul>
+      <p id="logout"><a>Cerrar&#160;Session</a></p>
+    </nav>
+    <h1 id="nombreUser"></h1>
+    <div class="container">
+      <form action="#" class="mt-4" id="newEvent">
+        <div class="form-group" id="grupo-id">
+          <label for="id-evento">ID Evento</label>
+          <input
+            type="text"
+            class="form-control"
+            id="id-evento"
+            name="id-evento"
+          />
+          <p class="error"></p>
+        </div>
+        <div class="form-group" id="grupo-nombre">
+          <label for="nombre">Nombre</label>
+          <input type="text" class="form-control" id="nombre" name="nombre" />
+          <p class="error"></p>
+        </div>
+        <div class="form-group" id="grupo-fecha">
+          <label for="fecha">Fecha</label>
+          <input type="date" class="form-control" id="fecha" name="fecha" />
+          <p class="error"></p>
+        </div>
+        <div class="form-group" id="grupo-descipcion">
+          <label for="descripcion">Descripción</label>
+          <input
+            type="text"
+            class="form-control"
+            id="descripcion"
+            name="descripcion"
+          />
+          <p class="error"></p>
+        </div>
+        <div class="form-group" id="grupo-precio">
+          <label for="precio">Precio (en €)</label>
+          <input type="text" class="form-control" id="precio" name="precio" />
+          <p class="error"></p>
+        </div>
+        <div class="form-group" id="grupo-imagen">
+          <label for="input-imagen">Imagen</label>
+          <input
+            type="file"
+            class="form-control"
+            id="input-imagen"
+            name="input-imagen"
+            accept="image/png, image/jpeg"
+          />
+          <p class="error" id="error-imagen"></p>
+        </div>
+        <div class="form-group img-preview">
+          <figure>
+            <img src="" id="previewImagen" />
+            <figcaption id="captionImagen"></figcaption>
+          </figure>
+        </div>
+        <div class="btn-container">
+          <input
+            type="submit"
+            class="btn btn-primary btn-lg"
+            id="anyadir"
+            value="Añadir"
+          />
+        </div>
+      </form>
+    </div>
+    <script src="../scripts/ajax.js"></script>
+    <script src="../scripts/nuevo-evento.js"></script>
+    <script src="../scripts/validaForm.js"></script>
+  </body>
+</html>
