@@ -50,19 +50,26 @@ inputs.forEach(input => {
 })
 
 //Botón muestra password login
+let inputPass = document.querySelector('.show-password');
 let tipoInput = document.querySelector('#pass').getAttribute('type');
-document.querySelector('.show-password').addEventListener('mouseover', () => {
+
+
+
+
+inputPass.addEventListener('mouseover', () => {
     if (tipoInput == 'password') {
-        document.querySelector('#pass').setAttribute('type', 'text')
+        document.querySelector('#pass').setAttribute('type', 'text');
+        document.querySelector('.show-password').setAttribute('src', './resources/open-eye-icon.png');
     } else {
     }
     
 })
-document.querySelector('.show-password').addEventListener('mouseleave', () => {
+inputPass.addEventListener('mouseleave', () => {
     if (tipoInput == 'password') {
-        document.querySelector('#pass').setAttribute('type', 'password')
+        document.querySelector('#pass').setAttribute('type', 'password');
+        document.querySelector('.show-password').setAttribute('src', './resources/closed-eye-icon.png');
+
     } else {
     }
 })
-
 

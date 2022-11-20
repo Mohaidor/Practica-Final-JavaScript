@@ -3,6 +3,7 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 html,
 body {
   background-color: lightgray;
@@ -98,4 +99,4 @@ select {
   #contenedor-eventos article {
     flex: 0 1 calc(20% - 1em);
   }
-} /*# sourceMappingURL=estilosEventos.css.map */
+}/*# sourceMappingURL=estilosEventos.css.map */

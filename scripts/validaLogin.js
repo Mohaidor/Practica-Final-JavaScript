@@ -1,7 +1,6 @@
 'use strict'
 //TODO:Cambio a AJAX
 //let usuariosGuardados = JSON.parse(localStorage.getItem("usuarios") || '[]');
-console.log(atob('UXdlcnR5MTA5Mg=='));
 window.addEventListener('load', getUsuariosLogin(), false)
 
 

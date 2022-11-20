@@ -40,31 +40,41 @@ inputs.forEach(input => {
     }, false);
 })
 //Botón muestra password
+let inputPass = document.querySelector('.show-password');
 let tipoInput = document.querySelector('#pass').getAttribute('type');
-document.querySelector('.show-password').addEventListener('mouseover', () => {
+
+inputPass.addEventListener('mouseover', () => {
     if (tipoInput == 'password') {
         document.querySelector('#pass').setAttribute('type', 'text')
+        inputPass.setAttribute('src', '../resources/open-eye-icon.png');
+
     }
 })
-document.querySelector('.show-password').addEventListener('mouseleave', () => {
+inputPass.addEventListener('mouseleave', () => {
     if (tipoInput == 'password') {
         document.querySelector('#pass').setAttribute('type', 'password')
+        document.querySelector('.show-password').setAttribute('src', '../resources/closed-eye-icon.png');
+        
     }
 })
 
 
-//Botón muestra verificación password
+let inputPass2 = document.querySelector('.show-password2');
 let tipoInputPass2 = document.querySelector('#pass2').getAttribute('type');
-document.querySelector('.show-password2').addEventListener('mouseover', () => {
-    if (tipoInput == 'password') {
+//Botón muestra verificación password
+inputPass2.addEventListener('mouseover', () => {
+    if (tipoInputPass2 == 'password') {
         document.querySelector('#pass2').setAttribute('type', 'text')
+        inputPass2.setAttribute('src', '../resources/open-eye-icon.png');
     } else {
     }
     
 })
-document.querySelector('.show-password2').addEventListener('mouseleave', () => {
-    if (tipoInput == 'password') {
+inputPass2.addEventListener('mouseleave', () => {
+    if (tipoInputPass2 == 'password') {
         document.querySelector('#pass2').setAttribute('type', 'password')
+        inputPass2.setAttribute('src', '../resources/closed-eye-icon.png');
+
     } else {
     }
     
