@@ -1,10 +1,11 @@
 'use strict'
 
-//Al cargar la página llama a la función cargaEventos en AJAX
+//Al cargar la página llama a la función cargaEventos en AJAX...
 window.addEventListener('load', () => {
     getEventosPasados()
 }, false);
-
+//...y rellena esta variable
+let eventosGuardados;
 
 //El nodo del selector del orden de los eventos
 let select = document.querySelector('#orden');

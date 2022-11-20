@@ -131,7 +131,6 @@ function getEventos() {
 //Obtiene todos los eventos para la página eventos-pasados
 
 function getEventosPasados() {
-    let eventosGuardados;
     let ajax2 = new XMLHttpRequest();
     ajax2.open("GET", '../server/eventos.json', true);
     ajax2.send();
