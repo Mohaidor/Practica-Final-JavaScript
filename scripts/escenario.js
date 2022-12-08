@@ -4,6 +4,25 @@
 window.addEventListener('load', getEscenarioAjax(), false)
 //let arrayEventos = JSON.parse(localStorage.eventos);
 
+
+//Genera 210 contenedores de asiento con una imagen dentro 
+let containerAsientos = document.querySelector('#container')
+for (let i = 1; i < 211; i++) {
+    
+    let asiento = document.createElement('div');
+    asiento.classList.add('asiento')
+    asiento.setAttribute('id', i);
+
+    let imagenAsiento = document.createElement('img')
+    imagenAsiento.setAttribute('src', '../resources/chair.png');
+    imagenAsiento.setAttribute('alt', 'Asiento')
+
+    asiento.appendChild(imagenAsiento);
+    containerAsientos.appendChild(asiento)
+}
+
+
+
 //TODO:Cambio a AJAX
 //Esta variable la llena ajax
 let arrayEventos;
@@ -49,18 +68,22 @@ function cargaSituacionButacas(evento) {
             }
         })
     } else {
-        //Si no añado propiedad ocupacion basica al evento
+        //Si no creo una propiedad base que se añadirá al evento(un objeto que tiene id=el id del div y un boolenao que es false )
         let base = [...document.querySelectorAll('.asiento')].map(asiento => {
             return {
                 id: asiento.id,
                 ocupado: false
             }
         })
+        //añado propiedad ocupacion basica al evento
         evento.ocupacion = base
+        //Obtener la key del evento a modificar
         let keyEvento = arrayEventos.indexOf(arrayEventos.find(a => a.id === eventoId))
+        //sobreescribo el evento
         arrayEventos[keyEvento] = evento
         //TODO:Cambio a AJAX
         //localStorage.setItem('eventos', JSON.stringify(arrayEventos));
+        //Guardo en ajax
         setEscenario(arrayEventos);
     }
 }
